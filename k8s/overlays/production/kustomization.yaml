@@ -7,3 +7,10 @@ patches:
     patch: |-
       - {op: replace, path: /spec/replicas, value: 3}
       - {op: replace, path: /spec/template/spec/containers/0/env/0/value, value: production}
+  - target: {kind: Service, name: taskflow}
+    patch: |-
+      - {op: replace, path: /spec/ports/0/nodePort, value: 30081}
+images:
+  - name: ghcr.io/YOUR_GITHUB_USER/taskflow
+    newName: ghcr.io/johncook20/taskflow
+    newTag: "1.0.3"
