@@ -1,0 +1,23 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Python environments
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Test outputs
+.coverage
+coverage.xml
+reports/

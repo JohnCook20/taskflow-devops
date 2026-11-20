@@ -1,0 +1,12 @@
+.git
+.github
+__pycache__
+*.pyc
+venv
+reports
+tests
+docs
+k8s
+ansible
+monitoring
+Jenkinsfile
