@@ -71,6 +71,7 @@ jobs:
       - name: Push image (Release)
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
+          IMAGE=$(echo "ghcr.io/${GITHUB_REPOSITORY_OWNER}/taskflow" | tr '[:upper:]' '[:lower:]')
           V=${{ steps.meta.outputs.version }}
           docker tag taskflow:$V $IMAGE:$V
           docker tag taskflow:$V $IMAGE:latest
