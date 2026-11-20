@@ -11,3 +11,7 @@ patches:
     patch: |-
       - {op: replace, path: /spec/minReplicas, value: 1}
       - {op: replace, path: /spec/maxReplicas, value: 2}
+images:
+  - name: ghcr.io/YOUR_GITHUB_USER/taskflow
+    newName: ghcr.io/johncook20/taskflow
+    newTag: latest
